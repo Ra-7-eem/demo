@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="استوديو 360 — جولات افتراضية بانورامية بدقة 360 درجة للعقارات والفنادق والمطاعم والمعارض في مصر. احجز جلسة تصوير الآن.">
+<title>360° | تصوير بانورامي افتراضي — استوديو 360</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&family=Tajawal:wght@300;400;500;700&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="panorama360.css">
+</head>
+<body>
+
+<div class="grain"></div>
+
+<!-- ===== MOBILE SIDEBAR OVERLAY ===== -->
+<div class="mob-overlay" id="mobOverlay"></div>
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-close" id="mobClose" aria-label="إغلاق القائمة">✕</button>
+  <div class="mob-logo"><span class="ring"></span> استوديو 360</div>
+  <nav class="mob-nav">
+    <a href="#services">الخدمات</a>
+    <a href="#whyus">لماذا نحن</a>
+    <a href="#process">طريقة العمل</a>
+    <a href="#portfolio">أعمالنا</a>
+    <a href="#pricing">الباقات</a>
+    <a href="#faq">الأسئلة الشائعة</a>
+    <a href="#contact-form">تواصل معنا</a>
+  </nav>
+  <a href="#contact-form" class="mob-cta">احجز جلسة تصوير</a>
+</div>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <nav>
+    <a href="#" class="logo"><span class="ring"></span> استوديو 360</a>
+    <div class="navlinks">
+      <a href="#about">من نحن</a>
+      <a href="#services">الخدمات</a>
+      <a href="#whyus">لماذا نحن</a>
+      <a href="#process">طريقة العمل</a>
+      <a href="#portfolio">أعمالنا</a>
+      <a href="#pricing">الباقات</a>
+      <a href="#faq">الأسئلة الشائعة</a>
+      <a href="#contact-form">تواصل معنا</a>
+    </div>
+    <div class="nav-right">
+      <a href="#contact-form" class="nav-cta">احجز جلسة تصوير</a>
+      <button class="hamburger" id="hamburger" aria-label="فتح القائمة">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="wrap hero-wrap">
+    <div>
+      <div class="eyebrow"><span class="dot"></span> تصوير بانورامي 360° للمساحات</div>
+      <h1>خلّي اللي يشوف مكانك<br>يحس إنه <em>واقف جواه</em></h1>
+      <p class="lead">جولات افتراضية تفاعلية بدقة 360 درجة للعقارات والفنادق والمطاعم والمعارض — نحوّل أي مساحة إلى تجربة يقدر أي حد يستكشفها من موبايله في أي وقت.</p>
+      <div class="hero-ctas">
+        <a href="#contact-form" class="btn-primary">احجز جلسة تصوير</a>
+        <a href="#portfolio" class="btn-ghost">شاهد نموذج جولة ↩</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><b>+310</b><span>مساحة تم تصويرها</span></div>
+        <div class="stat"><b>48h</b><span>متوسط وقت التسليم</span></div>
+        <div class="stat"><b>8K</b><span>دقة التصوير</span></div>
+      </div>
+    </div>
+
+    <div class="dial-stage">
+      <div class="compass">اسحب لتدور 360°</div>
+      <div class="dial" id="dial">
+        <div class="dial-strip" id="dialStrip"></div>
+        <div class="dial-ring"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="scroll-indicator" aria-hidden="true">
+    <span>اكتشف المزيد</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about" class="about-section">
+  <div class="wrap">
+    <div class="about-grid">
+
+      <!-- Visual Side -->
+      <div class="about-visual reveal">
+        <div class="about-ring-wrap">
+          <!-- Decorative 360° rings -->
+          <div class="about-ring about-ring--1"></div>
+          <div class="about-ring about-ring--2"></div>
+          <div class="about-ring about-ring--3"></div>
+          <!-- Center card -->
+          <div class="about-center-card">
+            <div class="about-center-icon">
+              <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M3 12h18M12 3a14 14 0 010 18 14 14 0 010-18z"/>
+              </svg>
+            </div>
+            <span class="about-center-label">360°</span>
+            <span class="about-center-sub">استوديو</span>
+          </div>
+          <!-- Orbiting badges -->
+          <div class="about-badge about-badge--top">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4L12 2z"/></svg>
+            8K دقة
+          </div>
+          <div class="about-badge about-badge--left">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            48h تسليم
+          </div>
+          <div class="about-badge about-badge--bottom">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            +310 مشروع
+          </div>
+        </div>
+      </div>
+
+      <!-- Text Side -->
+      <div class="about-text reveal">
+        <div class="eyebrow"><span class="dot"></span> من نحن</div>
+        <h2>بدأنا بسؤال بسيط:<br><em class="about-em">ليه المكان الحلو لازم تزوره عشان تحكم عليه؟</em></h2>
+        <p class="about-lead">استوديو 360 اتأسس من شغف حقيقي بالمساحات والتصوير. إحنا مش بس بنصور — إحنا بنحوّل أي مكان لتجربة رقمية حقيقية تخلي العميل يحس إنه موجود جسديًا قبل ما يزور.</p>
+        <p class="about-body">من شقق التجمع لمنتجعات الساحل، صورنا أكتر من 310 مساحة في قطاعات مختلفة، وبنيّا علاقات طويلة مع عملاء بيثقوا فينا كشركاء، مش مجرد مزودي خدمة.</p>
+        <div class="about-milestones">
+          <div class="about-milestone">
+            <span class="milestone-year">2020</span>
+            <p>تأسيس الاستوديو بفريق مكوّن من 3 مصورين محترفين</p>
+          </div>
+          <div class="about-milestone">
+            <span class="milestone-year">2022</span>
+            <p>أول شراكة مع سلسلة فنادق كبرى وتوسع لتغطية الساحل الشمالي</p>
+          </div>
+          <div class="about-milestone">
+            <span class="milestone-year">2024</span>
+            <p>إطلاق خدمة الربط بخرائط جوجل والتصوير الجوي بالدرون</p>
+          </div>
+        </div>
+        <a href="#contact-form" class="btn-primary">تواصل مع فريقنا</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== STATS COUNTER ===== -->
+<section class="stats-section" id="stats">
+  <div class="wrap">
+    <div class="stats-grid">
+      <div class="stat-item reveal">
+        <b class="stat-num" data-target="310">0</b>
+        <span>+</span>
+        <p>مساحة تم تصويرها</p>
+      </div>
+      <div class="stat-item reveal">
+        <b class="stat-num" data-target="98">0</b>
+        <span>%</span>
+        <p>نسبة رضا العملاء</p>
+      </div>
+      <div class="stat-item reveal">
+        <b class="stat-num" data-target="48">0</b>
+        <span>h</span>
+        <p>متوسط وقت التسليم</p>
+      </div>
+      <div class="stat-item reveal">
+        <b class="stat-num" data-target="5">0</b>
+        <span>⭐</span>
+        <p>متوسط تقييم العملاء</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CLIENTS LOGOS ===== -->
+<section id="clients" class="clients-section">
+  <div class="wrap">
+    <div class="section-head reveal" style="text-align:center; max-width:100%;">
+      <div class="eyebrow" style="justify-content:center;"><span class="dot"></span> شركاؤنا</div>
+      <h2>عملاؤنا شركاء نجاحنا</h2>
+      <p style="margin:0 auto;">نفخر بالعمل مع أبرز العقارات والفنادق والمطاعم في مصر.</p>
+    </div>
+
+    <div class="clients-wall">
+
+      <div class="client-tile" style="--stagger:0ms">
+        <div class="client-tile-media">
+          <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+            <rect width="160" height="160" fill="#f0f7f4"/>
+            <text x="80" y="60" text-anchor="middle" font-family="Cairo,sans-serif" font-weight="900" font-size="13" fill="#1a6b45">نخيل</text>
+            <text x="80" y="78" text-anchor="middle" font-family="Cairo,sans-serif" font-weight="700" font-size="10" fill="#3a9468">للعقارات</text>
+            <path d="M80 95 C70 85 60 80 60 70 C60 60 70 55 80 62 C90 55 100 60 100 70 C100 80 90 85 80 95Z" fill="#2d8c5e" opacity="0.85"/>
+            <line x1="80" y1="95" x2="80" y2="115" stroke="#2d8c5e" stroke-width="3"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="client-tile" style="--stagger:60ms">
+        <div class="client-tile-media">
+          <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+            <rect width="160" height="160" fill="#1a1a2e"/>
+            <text x="80" y="95" text-anchor="middle" font-family="Cairo,sans-serif" font-weight="900" font-size="14" fill="#d4af37">CROWN</text>
+            <text x="80" y="112" text-anchor="middle" font-family="Cairo,sans-serif" font-size="9" fill="#9a8060" letter-spacing="3">HOTEL</text>
+            <path d="M50 80 L65 55 L80 75 L95 55 L110 80 Z" fill="none" stroke="#d4af37" stroke-width="2"/>
+            <path d="M50 80 L110 80" stroke="#d4af37" stroke-width="1.5"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="client-tile" style="--stagger:120ms">
+        <div class="client-tile-media">
+          <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+            <rect width="160" height="160" fill="#2c1010"/>
+            <circle cx="80" cy="70" r="32" fill="none" stroke="#e63946" stroke-width="2"/>
+            <text x="80" y="75" text-anchor="middle" font-family="Cairo,sans-serif" font-weight="900" font-size="14" fill="#fff">SPICE</text>
+            <text x="80" y="115" text-anchor="middle" font-family="Cairo,sans-serif" font-size="10" fill="#e63946">مطعم سبايس</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="client-tile" style="--stagger:180ms">
+        <div class="client-tile-media">
+          <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+            <rect width="160" height="160" fill="#faf3e0"/>
+            <rect x="45" y="60" width="70" height="55" rx="4" fill="#6b4c2a"/>
+            <path d="M115 72 Q130 72 130 82 Q130 92 115 90" stroke="#6b4c2a" fill="none" stroke-width="3"/>
+            <text x="80" y="135" text-anchor="middle" font-family="Cairo,sans-serif" font-weight="800" font-size="11" fill="#6b4c2a">CITY CAFÉ</text>
+            <rect x="55" y="115" width="50" height="5" rx="2" fill="#6b4c2a" opacity="0.3"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="client-tile" style="--stagger:240ms">
+        <div class="client-tile-media">
+          <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+            <rect width="160" height="160" fill="#f4f8ff"/>
+            <rect x="65" y="40" width="30" height="80" fill="#1f3b8f" opacity="0.9"/>
+            <rect x="50" y="70" width="20" height="50" fill="#3558c0" opacity="0.7"/>
+            <rect x="90" y="60" width="20" height="60" fill="#3558c0" opacity="0.7"/>
+            <rect x="40" y="120" width="80" height="5" fill="#1f3b8f"/>
+            <text x="80" y="144" text-anchor="middle" font-family="Cairo,sans-serif" font-weight="800" font-size="9" fill="#1f3b8f" letter-spacing="1">RESIDENCE</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="client-tile" style="--stagger:300ms">
+        <div class="client-tile-media">
+          <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+            <rect width="160" height="160" fill="#fff5f9"/>
+            <ellipse cx="80" cy="72" rx="20" ry="28" fill="#e8a0b4" opacity="0.5"/>
+            <ellipse cx="58" cy="78" rx="16" ry="22" fill="#e8a0b4" opacity="0.4" transform="rotate(-25 58 78)"/>
+            <ellipse cx="102" cy="78" rx="16" ry="22" fill="#e8a0b4" opacity="0.4" transform="rotate(25 102 78)"/>
+            <text x="80" y="128" text-anchor="middle" font-family="Cairo,sans-serif" font-weight="700" font-size="11" fill="#c06080">LOTUS SPA</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="client-tile" style="--stagger:360ms">
+        <div class="client-tile-media">
+          <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+            <rect width="160" height="160" fill="#fff8ee"/>
+            <path d="M80 40 Q55 40 55 65 L55 95 Q55 105 65 105 L95 105 Q105 105 105 95 L105 65 Q105 40 80 40Z" fill="none" stroke="#c9820a" stroke-width="2.5"/>
+            <path d="M68 105 L68 120 M92 105 L92 120" stroke="#c9820a" stroke-width="2.5"/>
+            <text x="80" y="100" text-anchor="middle" font-family="Cairo,sans-serif" font-weight="900" font-size="10" fill="#c9820a">الأندلس</text>
+            <text x="80" y="138" text-anchor="middle" font-family="Cairo,sans-serif" font-size="9" fill="#888" letter-spacing="2">MALL</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="client-tile" style="--stagger:420ms">
+        <div class="client-tile-media">
+          <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+            <rect width="160" height="160" fill="#1c2e1c"/>
+            <circle cx="80" cy="72" r="36" fill="#2e5c2e"/>
+            <text x="80" y="78" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="18" fill="#c5e8a0">Verdi</text>
+            <text x="80" y="125" text-anchor="middle" font-family="Cairo,sans-serif" font-size="9" fill="#82b870" letter-spacing="3">RESTAURANT</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="client-tile" style="--stagger:480ms">
+        <div class="client-tile-media">
+          <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+            <rect width="160" height="160" fill="#0d0d0d"/>
+            <polygon points="80,38 115,95 45,95" fill="none" stroke="#f0c040" stroke-width="2"/>
+            <text x="80" y="122" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="#f0c040" letter-spacing="2">THE PEAK</text>
+            <text x="80" y="140" text-anchor="middle" font-family="Cairo,sans-serif" font-size="8" fill="#888" letter-spacing="2">HOTEL &amp; SPA</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="client-tile" style="--stagger:540ms">
+        <div class="client-tile-media">
+          <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+            <rect width="160" height="160" fill="#e8f4f8"/>
+            <path d="M30 90 Q55 50 80 80 Q105 110 130 70" stroke="#2196a0" fill="none" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M30 105 Q55 65 80 95 Q105 125 130 85" stroke="#2196a0" fill="none" stroke-width="2" opacity="0.4" stroke-linecap="round"/>
+            <text x="80" y="138" text-anchor="middle" font-family="Cairo,sans-serif" font-weight="800" font-size="13" fill="#2196a0">نسمة</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="client-tile" style="--stagger:600ms">
+        <div class="client-tile-media">
+          <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+            <rect width="160" height="160" fill="#f7f5f0"/>
+            <polygon points="80,40 100,68 130,68 107,86 116,115 80,97 44,115 53,86 30,68 60,68" fill="#bba060" opacity="0.85"/>
+            <text x="80" y="148" text-anchor="middle" font-family="Cairo,sans-serif" font-weight="700" font-size="9" fill="#7a6030" letter-spacing="1">PLATINUM GROUP</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="client-tile" style="--stagger:660ms">
+        <div class="client-tile-media">
+          <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+            <rect width="160" height="160" fill="#1e0a2a"/>
+            <ellipse cx="80" cy="72" rx="22" ry="30" fill="#9b59b6" opacity="0.6"/>
+            <ellipse cx="58" cy="80" rx="18" ry="24" fill="#7d3c98" opacity="0.5" transform="rotate(-30 58 80)"/>
+            <ellipse cx="102" cy="80" rx="18" ry="24" fill="#7d3c98" opacity="0.5" transform="rotate(30 102 80)"/>
+            <circle cx="80" cy="72" r="8" fill="#d7bde2"/>
+            <text x="80" y="125" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="#d7bde2">Orchid</text>
+            <text x="80" y="142" text-anchor="middle" font-family="Cairo,sans-serif" font-size="8" fill="#9b59b6" letter-spacing="2">RESORT</text>
+          </svg>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="clients-cta reveal">كن جزءًا من عملائنا الناجحين — <a href="#contact-form">احجز جلستك الآن</a></p>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section id="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow"><span class="dot"></span> خدماتنا</div>
+      <h2>تصوير 360° لكل مكان له قصة يستاهل يتحكي</h2>
+      <p>نخدم القطاعات اللي بتعتمد على أول انطباع بصري — من العقار للمطعم للفندق.</p>
+    </div>
+
+    <div class="services-grid reveal">
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-6 9 6v10a1 1 0 01-1 1h-5v-6H9v6H4a1 1 0 01-1-1V9z"/></svg>
+        </div>
+        <h3>عقارات سكنية وتجارية</h3>
+        <p>جولات افتراضية للشقق والفلل والمكاتب تسهّل على المشتري القرار قبل ما يزور المكان فعليًا.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21V8l9-5 9 5v13M8 21v-6h8v6"/></svg>
+        </div>
+        <h3>فنادق ومنتجعات</h3>
+        <p>عرض الغرف والمرافق بشكل تفاعلي يرفع نسبة الحجز المباشر من موقع الفندق.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 11h16M4 11a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2v-6a2 2 0 00-2-2M4 11l1.5-6h13L20 11"/></svg>
+        </div>
+        <h3>مطاعم ومقاهي</h3>
+        <p>خلي الزبون يتصفح الأجواء والديكور قبل ما يحجز طاولته — جولة تحط في جوجل وانستجرام.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="14" rx="1"/><path d="M8 21h8M12 18v3"/></svg>
+        </div>
+        <h3>معارض ومحلات تجارية</h3>
+        <p>عرض المنتجات والتصميم الداخلي للمعرض بشكل يخلي العميل يستكشف بنفسه.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4L12 2z"/></svg>
+        </div>
+        <h3>قاعات مناسبات</h3>
+        <p>خلي أصحاب المناسبات يتخيلوا حفلهم جوه القاعة قبل ما يحجزوا التاريخ.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18 14 14 0 010-18z"/></svg>
+        </div>
+        <h3>مواقع أثرية وسياحية</h3>
+        <p>أرشفة وعرض المواقع التراثية رقميًا بجودة تحفظها لأجيال قادمة.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COMPARISON (360 vs Traditional) ===== -->
+<section id="compare" class="compare-section">
+  <div class="wrap">
+    <div class="compare-header reveal">
+      <div class="eyebrow" style="margin-bottom:12px;"><span class="dot" style="background:#0cdbde;box-shadow:0 0 8px #0cdbde;"></span> قارن بنفسك</div>
+      <h2>لا تكتفِ <em class="compare-em">بصورة</em></h2>
+      <p>امنح عميلك القدرة على استكشاف المكان بنفسه — لا مجرد صورة يراها</p>
+    </div>
+
+    <div class="compare-stage reveal">
+      <div class="compare-glow-orb orb-1"></div>
+      <div class="compare-glow-orb orb-2"></div>
+
+      <!-- VS Badge -->
+      <div class="vs-badge">VS</div>
+
+      <div class="compare-grid">
+        
+        <!-- Traditional Photo Side -->
+        <div class="compare-card compare-traditional">
+          <div class="compare-icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="3" y="7" width="18" height="13" rx="2" ry="2"/>
+              <path d="M8 7V5c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2v2M12 17a3 3 0 100-6 3 3 0 000 6z"/>
+            </svg>
+          </div>
+          <h3>التصوير التقليدي</h3>
+          <ul class="compare-list">
+            <li class="cross">صورة ثابتة بزاوية واحدة</li>
+            <li class="cross">لا يمكن الاستكشاف الحر</li>
+            <li class="cross">تفاصيل كثيرة غير مرئية</li>
+            <li class="cross">تجربة بصرية محدودة</li>
+            <li class="cross">لا تفاعل مع العميل</li>
+          </ul>
+        </div>
+
+        <!-- 360 Virtual Tour Side -->
+        <div class="compare-card compare-virtual">
+          <div class="compare-icon-wrap virtual-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 2a14.5 14.5 0 000 20 14.5 14.5 0 000-20M2 12h20"/>
+            </svg>
+          </div>
+          <h3>التصوير الافتراضي 360°</h3>
+          <ul class="compare-list">
+            <li class="check">رؤية كاملة من كل الاتجاهات</li>
+            <li class="check">استكشاف تفاعلي حر</li>
+            <li class="check">جميع التفاصيل واضحة وجلية</li>
+            <li class="check">تجربة غامرة وواقعية</li>
+            <li class="check">انتقال بين المساحات بضغطة</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY US ===== -->
+<section id="whyus" class="whyus-section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow"><span class="dot"></span> لماذا نحن</div>
+      <h2>ليه تختار استوديو 360؟</h2>
+      <p>مش بس تصوير — ده تجربة كاملة من أول الحجز لحد ما تستلم الجولة جاهزة.</p>
+    </div>
+    <div class="whyus-grid">
+      <div class="whyus-card reveal">
+        <div class="whyus-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <h3>تسليم سريع خلال 48 ساعة</h3>
+        <p>فريقنا يشتغل على مدار الساعة عشان جولتك تكون جاهزة في أسرع وقت ممكن بدون تنازل في الجودة.</p>
+      </div>
+      <div class="whyus-card reveal">
+        <div class="whyus-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>جودة 8K احترافية</h3>
+        <p>نستخدم أحدث كاميرات 360° بدقة تصل لـ8K مع معالجة HDR للحصول على صورة نقية وواضحة.</p>
+      </div>
+      <div class="whyus-card reveal">
+        <div class="whyus-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3>ربط بخرائط جوجل</h3>
+        <p>نضيف جولتك مباشرةً على Google Business Profile وخرائط جوجل لزيادة ظهورك أمام العملاء.</p>
+      </div>
+      <div class="whyus-card reveal">
+        <div class="whyus-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3>دعم مستمر بعد التسليم</h3>
+        <p>مش بنسلمك الملف وبس — فريقنا متاح لأي تعديل أو دعم تقني بعد التسليم لمدة شهر كامل.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROCESS ===== -->
+<section id="process">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow"><span class="dot"></span> طريقة العمل</div>
+      <h2>من الحجز للتسليم في أربع خطوات</h2>
+      <p>عملية واضحة ومتسلسلة، مصممة عشان توصلك جولتك جاهزة بأقل مجهود من ناحيتك.</p>
+    </div>
+
+    <div class="process reveal">
+      <div class="process-step">
+        <div class="step-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        </div>
+        <div class="num">01</div>
+        <h3>حجز الموعد</h3>
+        <p>تحدد المساحة والمكان، ونرسلك موعد التصوير المناسب خلال 48 ساعة.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg>
+        </div>
+        <div class="num">02</div>
+        <h3>التصوير الميداني</h3>
+        <p>فريقنا يصور كل نقطة بكاميرا 360° احترافية بدقة تصل لـ8K.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </div>
+        <div class="num">03</div>
+        <h3>المعالجة والدمج</h3>
+        <p>ندمج الصور (Stitching) ونظبط الإضاءة (HDR) ونربط النقاط ببعض.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.19 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.72 6.72l1.28-1.28a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <div class="num">04</div>
+        <h3>التسليم</h3>
+        <p>تستلم رابط الجولة التفاعلية، جاهز للتضمين في موقعك وخرائط جوجل.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PORTFOLIO ===== -->
+<section id="portfolio">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow"><span class="dot"></span> أعمالنا</div>
+      <h2>نماذج من مساحات صورناها</h2>
+      <p>عينة من المشاريع اللي اشتغلنا عليها في القطاعات المختلفة.</p>
+    </div>
+
+    <div class="portfolio-grid reveal">
+      <div class="pf-card">
+        <div class="pf-thumb">
+          <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="300" fill="#1b2528"/>
+            <rect x="0" y="180" width="400" height="120" fill="#141c1f"/>
+            <rect x="40" y="60" width="120" height="120" fill="#22302f" opacity="0.7"/>
+            <rect x="220" y="90" width="150" height="90" fill="#2a3a38" opacity="0.6"/>
+            <circle cx="200" cy="150" r="130" fill="none" stroke="#c9a227" stroke-opacity="0.25" stroke-width="1"/>
+          </svg>
+          <div class="pf-badge">جولة 360°</div>
+          <div class="pf-overlay">
+            <a href="#contact-form" class="pf-tour-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M10 8l6 4-6 4V8z"/></svg>
+              شاهد نموذج الجولة
+            </a>
+          </div>
+        </div>
+        <div class="pf-info"><h3>شقة سكنية — التجمع الخامس</h3><span>6 نقاط تصوير</span></div>
+      </div>
+      <div class="pf-card">
+        <div class="pf-thumb">
+          <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="300" fill="#181f22"/>
+            <path d="M0 220 L120 120 L240 220 Z" fill="#233230" opacity="0.7"/>
+            <path d="M160 240 L280 140 L400 240 Z" fill="#2b3c39" opacity="0.6"/>
+            <circle cx="200" cy="150" r="130" fill="none" stroke="#c9a227" stroke-opacity="0.25" stroke-width="1"/>
+          </svg>
+          <div class="pf-badge">جولة 360°</div>
+          <div class="pf-overlay">
+            <a href="#contact-form" class="pf-tour-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M10 8l6 4-6 4V8z"/></svg>
+              شاهد نموذج الجولة
+            </a>
+          </div>
+        </div>
+        <div class="pf-info"><h3>لوبي فندق — العلمين</h3><span>9 نقاط تصوير</span></div>
+      </div>
+      <div class="pf-card">
+        <div class="pf-thumb">
+          <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="300" fill="#141c1f"/>
+            <rect x="0" y="0" width="400" height="150" fill="#1f2b29" opacity="0.6"/>
+            <rect x="60" y="170" width="90" height="90" rx="6" fill="#2a3a38" opacity="0.7"/>
+            <rect x="180" y="150" width="140" height="110" rx="6" fill="#233230" opacity="0.6"/>
+            <circle cx="200" cy="150" r="130" fill="none" stroke="#c9a227" stroke-opacity="0.25" stroke-width="1"/>
+          </svg>
+          <div class="pf-badge">جولة 360°</div>
+          <div class="pf-overlay">
+            <a href="#contact-form" class="pf-tour-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M10 8l6 4-6 4V8z"/></svg>
+              شاهد نموذج الجولة
+            </a>
+          </div>
+        </div>
+        <div class="pf-info"><h3>مطعم — الساحل الشمالي</h3><span>5 نقاط تصوير</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRICING ===== -->
+<section id="pricing">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow"><span class="dot"></span> الباقات</div>
+      <h2>اختار الباقة اللي تناسب مساحتك</h2>
+      <p>الأسعار تختلف حسب عدد نقاط التصوير ومساحة المكان — دي نقطة بداية.</p>
+    </div>
+
+    <div class="pricing-grid reveal">
+      <div class="price-card">
+        <div class="price-name">أساسية</div>
+        <div class="price-sub">للمساحات الصغيرة</div>
+        <div class="price-amount">2,500<span> جنيه</span></div>
+        <ul class="price-list">
+          <li>حتى 6 نقاط تصوير</li>
+          <li>دقة تصوير 6K</li>
+          <li>رابط جولة تفاعلية</li>
+          <li>تسليم خلال 72 ساعة</li>
+        </ul>
+        <a href="#contact-form" class="price-cta">اطلب الباقة</a>
+      </div>
+      <div class="price-card featured">
+        <div class="price-name">احترافية</div>
+        <div class="price-sub">الأكثر ملاءمة للعقارات والفنادق</div>
+        <div class="price-amount">4,900<span> جنيه</span></div>
+        <ul class="price-list">
+          <li>حتى 15 نقطة تصوير</li>
+          <li>دقة تصوير 8K</li>
+          <li>ربط بخرائط جوجل بزنس</li>
+          <li>تضمين مباشر في موقعك</li>
+          <li>تسليم خلال 48 ساعة</li>
+        </ul>
+        <a href="#contact-form" class="price-cta">اطلب الباقة</a>
+      </div>
+      <div class="price-card">
+        <div class="price-name">بريميوم</div>
+        <div class="price-sub">للمشاريع الكبيرة والمنتجعات</div>
+        <div class="price-amount">9,800<span> جنيه</span></div>
+        <ul class="price-list">
+          <li>نقاط تصوير غير محدودة</li>
+          <li>تصوير جوي بالدرون</li>
+          <li>فيديو تعريفي قصير</li>
+          <li>جولة مخصصة بهوية بصرية خاصة</li>
+          <li>تسليم خلال 5 أيام</li>
+        </ul>
+        <a href="#contact-form" class="price-cta">اطلب الباقة</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow"><span class="dot"></span> آراء العملاء</div>
+      <h2>عملاء جربوا الفرق</h2>
+    </div>
+    <div class="testi-grid reveal">
+      <div class="testi-card">
+        <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+        <p class="testi-quote">"عرضنا الجولة في إعلانات الشقة وقل عندنا عدد الزيارات اللي مالهاش لازمة، الناس بقت تيجي وهي متأكدة."</p>
+        <div class="testi-person">
+          <div class="testi-avatar testi-avatar--gold">ك.م</div>
+          <div><b>كريم منصور</b><span>مطور عقاري</span></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+        <p class="testi-quote">"ضفنا الجولة على بروفايل جوجل بتاع الفندق، ومعدل الحجز المباشر زاد بشكل واضح خلال شهرين."</p>
+        <div class="testi-person">
+          <div class="testi-avatar testi-avatar--teal">س.ع</div>
+          <div><b>سارة عبد الله</b><span>مديرة تسويق فندق</span></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+        <p class="testi-quote">"التسليم كان في الميعاد بالظبط، والجودة فوق المتوقع. هنكرر التعامل أكيد مع كل فرع جديد."</p>
+        <div class="testi-person">
+          <div class="testi-avatar testi-avatar--blue">أ.ف</div>
+          <div><b>أحمد فتحي</b><span>صاحب سلسلة مطاعم</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq" class="faq-section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow"><span class="dot"></span> الأسئلة الشائعة</div>
+      <h2>أي سؤال في بالك؟</h2>
+      <p>إجابات على أكثر الأسئلة اللي بتسألها عملاؤنا قبل البدء.</p>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>كم يستغرق وقت التصوير داخل المكان؟</span>
+          <div class="faq-icon"></div>
+        </button>
+        <div class="faq-a">
+          <p>يعتمد على حجم المساحة وعدد النقاط، لكن في المتوسط الباقة الأساسية تاخد 2-3 ساعات، والاحترافية 4-6 ساعات. فريقنا بيتحرك بكفاءة عشان تقل فترة الإزعاج على مكانك.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>هل أحتاج إنترنت سريع لعرض الجولة؟</span>
+          <div class="faq-icon"></div>
+        </button>
+        <div class="faq-a">
+          <p>الجولة متاحة على كل الأجهزة والاتصالات. بنوفر نسخة محسّنة للموبايل وسرعات إنترنت المتوسطة، ونسخة عالية الجودة لمن يملك اتصال أسرع.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>هل الجولة تشتغل على الموبايل؟</span>
+          <div class="faq-icon"></div>
+        </button>
+        <div class="faq-a">
+          <p>نعم تمامًا. الجولة تشتغل على أي جهاز — موبايل، تابلت، أو كمبيوتر — بدون الحاجة لتحميل أي تطبيق. بتشغّلها من الرابط مباشرةً.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>هل ممكن إضافة معلومات داخل الجولة (نصوص / أسعار / فيديو)؟</span>
+          <div class="faq-icon"></div>
+        </button>
+        <div class="faq-a">
+          <p>نعم، في الباقة الاحترافية والبريميوم بنضيف hotspots تفاعلية جوه الجولة — معلومات، صور، روابط، أو حتى مقاطع فيديو قصيرة.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>هل الجولة بتظهر في بحث جوجل؟</span>
+          <div class="faq-icon"></div>
+        </button>
+        <div class="faq-a">
+          <p>في باقة الاحترافية والبريميوم بنربط الجولة بـ Google Business Profile، فبيظهر زر "الجولة الافتراضية" مباشرةً في نتائج البحث وخرائط جوجل.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>ماذا لو احتجت تعديلات بعد التسليم؟</span>
+          <div class="faq-icon"></div>
+        </button>
+        <div class="faq-a">
+          <p>فريق الدعم متاح شهر كامل بعد التسليم للتعديلات البسيطة بدون رسوم إضافية. التعديلات الكبيرة بتحسب حسب حجمها.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT FORM ===== -->
+<section id="contact-form" class="contact-section">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="eyebrow"><span class="dot"></span> تواصل معنا</div>
+        <h2>جاهز تبدأ؟<br>ابعتلنا تفاصيلك</h2>
+        <p>سنتواصل معك خلال يوم عمل واحد لتأكيد الموعد وتحديد تفاصيل المشروع.</p>
+        <div class="contact-details">
+          <a href="tel:+20100000000" class="contact-link">
+            <div class="contact-link-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.19 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.72 6.72l1.28-1.28a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <span>01xxxxxxxxx</span>
+          </a>
+          <a href="mailto:info@studio360.example" class="contact-link">
+            <div class="contact-link-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <span>info@studio360.example</span>
+          </a>
+          <a href="#" class="contact-link">
+            <div class="contact-link-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+            </div>
+            <span>واتساب مباشر</span>
+          </a>
+        </div>
+      </div>
+      <form class="contact-form reveal" id="mainContactForm" novalidate>
+        <div class="form-group">
+          <label for="fname">الاسم الكامل</label>
+          <input type="text" id="fname" name="name" placeholder="محمد أحمد" required>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fphone">رقم الهاتف</label>
+            <input type="tel" id="fphone" name="phone" placeholder="01xxxxxxxxx" required>
+          </div>
+          <div class="form-group">
+            <label for="ftype">نوع المساحة</label>
+            <select id="ftype" name="type" required>
+              <option value="" disabled selected>اختر النوع</option>
+              <option>شقة / فيلا</option>
+              <option>فندق / منتجع</option>
+              <option>مطعم / مقهى</option>
+              <option>معرض / محل</option>
+              <option>قاعة مناسبات</option>
+              <option>موقع سياحي / أثري</option>
+              <option>أخرى</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="fmsg">تفاصيل إضافية (اختياري)</label>
+          <textarea id="fmsg" name="message" rows="4" placeholder="صف مساحتك أو أي تفاصيل تساعدنا على تقديم عرض أدق..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary form-submit" id="formSubmit">
+          إرسال الطلب
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <div class="form-success" id="formSuccess" aria-live="polite">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          تم إرسال طلبك بنجاح! هنتواصل معك قريبًا.
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA BAND ===== -->
+<div class="cta-band">
+  <div class="wrap cta-inner">
+    <div>
+      <h2>جاهز تحوّل مساحتك لتجربة يقدر أي حد يعيشها؟</h2>
+      <p>احجز جلسة تصوير هذا الأسبوع، وهنتصل بيك خلال يوم عمل واحد لتأكيد الميعاد.</p>
+    </div>
+    <a href="#contact-form" class="btn-primary">احجز جلسة تصوير الآن</a>
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer id="contact">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <h4>استوديو 360</h4>
+        <p style="color:var(--ink-dim); font-size:14.5px; max-width:32ch;">نصنع جولات افتراضية بانورامية بدقة 360 درجة للعقارات والفنادق والمطاعم والمعارض في مصر.</p>
+      </div>
+      <div class="foot-col">
+        <h4>تواصل</h4>
+        <a href="tel:+20100000000">01xxxxxxxxx</a>
+        <a href="mailto:info@studio360.example">info@studio360.example</a>
+        <a href="#">واتساب مباشر</a>
+      </div>
+      <div class="foot-col">
+        <h4>الخدمات</h4>
+        <a href="#services">عقارات</a>
+        <a href="#services">فنادق ومطاعم</a>
+        <a href="#services">معارض تجارية</a>
+      </div>
+      <div class="foot-col">
+        <h4>الشركة</h4>
+        <a href="#portfolio">أعمالنا</a>
+        <a href="#pricing">الباقات</a>
+        <a href="#process">طريقة العمل</a>
+        <a href="#faq">الأسئلة الشائعة</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 استوديو 360 — جميع الحقوق محفوظة</span>
+      <span>تصوير بانورامي احترافي بدقة تصل إلى 8K</span>
+    </div>
+  </div>
+</footer>
+
+<script src="panorama360.js"></script>
+
+</body>
+</html>
